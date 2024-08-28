@@ -7,4 +7,5 @@
   ];
 
   languages.nix.enable = true;
+  languages.terraform.enable = true;
 }
