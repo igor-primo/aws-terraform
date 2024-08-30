@@ -16,5 +16,5 @@
     name = "Terraform Syntax Validation";
     entry = "terraform -chdir=aws-terraform validate";
     pass_filenames = false;
-  }
+  };
 }
