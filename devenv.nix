@@ -10,6 +10,11 @@
   languages.nix.enable = true;
   languages.terraform.enable = true;
 
+  enterShell = ''
+    ARN=$(aws eks update-kubeconfig --region 'us-east-1' --name 'devopstraining-cluster' | awk '{print $3}')
+    kubectl config set-context $ARN
+  '';
+
   pre-commit.hooks.terraform-format.enable = true;
   pre-commit.hooks.terraform-validate = {
     enable = true;
