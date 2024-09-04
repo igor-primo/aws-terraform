@@ -18,4 +18,11 @@ resource "aws_eks_node_group" "eks_managed_node_group" {
     aws_iam_role_policy_attachment.eks_mng_role_attachment_ecr,
     aws_iam_role_policy_attachment.eks_mng_role_attachment_cni
   ]
+
+  tags = merge(
+    var.tags,
+    {
+      Name = "${var.project_name}-nodegroup"
+    }
+  )
 }
