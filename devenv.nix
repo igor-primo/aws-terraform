@@ -12,7 +12,7 @@
 
   enterShell = ''
     ARN=$(aws eks update-kubeconfig --region 'us-east-1' --name 'devopstraining-cluster' | awk '{print $3}')
-    kubectl config set-context $ARN
+    [ $ARN != "" ] && kubectl config set-context $ARN
   '';
 
   pre-commit.hooks.terraform-format.enable = true;
