@@ -24,4 +24,9 @@
     entry = "terraform -chdir=aws-terraform validate";
     pass_filenames = false;
   };
+  pre-commit.hooks.terraform-docs = {
+    enable = true;
+    name = "Terraform Docs automatic documentation generation"
+    entry = "cd aws-terraform; terraform-docs markdown . --recursive --output-file README.md"
+  }
 }
