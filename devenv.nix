@@ -26,7 +26,7 @@
   };
   pre-commit.hooks.terraform-docs = {
     enable = true;
-    name = "Terraform Docs automatic documentation generation"
-    entry = "cd aws-terraform; terraform-docs markdown . --recursive --output-file README.md"
-  }
+    name = "Terraform Docs automatic documentation generation";
+    entry = "bash -c 'cd aws-terraform; terraform-docs markdown . --recursive --output-file README.md'";
+  };
 }
