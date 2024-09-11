@@ -11,3 +11,7 @@ this project uses Nix build manager wrapped inside devenv. Nix allow the creatio
 This use idiosyncrasy of mine should not trouble you. Just make sure the referred software in devenv.nix is installed.
 
 To see more about this, please refer [devenv](https://devenv.sh/) and [nix](https://nix.dev/).
+
+## Documentation
+
+Modules documentation in [this file](./aws-terraform/README.md)

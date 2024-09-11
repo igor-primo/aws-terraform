@@ -5,6 +5,7 @@
     pkgs.git 
     pkgs.awscli2
     pkgs.kubectl
+    pkgs.terraform-docs
   ];
 
   languages.nix.enable = true;
